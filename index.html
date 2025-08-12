@@ -6,7 +6,6 @@
     <title>Happy Birthday!</title>
     <link rel="icon" href="logo.png" type="image/png" />
     <style>
-      /* Load custom font */
       @font-face {
         font-family: 'League Spartan Bold';
         src: url('LeagueSpartan-Bold (1).woff2') format('woff2'),
@@ -38,27 +37,27 @@
         background: rgba(23, 216, 96, 0.15);
         border-radius: 15px;
         box-shadow:
-          0 0 10px var(--main-green),
-          0 0 25px var(--light-green);
+          0 4px 6px rgba(0, 0, 0, 0.5);
         text-shadow:
-          0 0 6px var(--main-green),
-          0 0 15px var(--light-green);
-        margin-bottom: 20px;
-        font-weight: bold; /* ensure bold */
+          1px 1px 3px rgba(0, 0, 0, 0.7);
+        margin-bottom: 40px; /* more space below */
+        font-weight: bold;
       }
       .nose-emoji {
-        font-size: clamp(4rem, 15vw, 7rem);
+        font-size: clamp(7rem, 20vw, 10rem);
+        margin-top: 20px; /* pushed down */
         text-shadow:
-          0 0 8px var(--main-green),
-          0 0 20px var(--light-green);
+          1px 1px 4px rgba(0, 0, 0, 0.6);
       }
       @media (max-width: 400px) {
         b {
           padding: 12px 20px;
           font-size: 2rem;
+          margin-bottom: 30px;
         }
         .nose-emoji {
-          font-size: 4rem;
+          font-size: 7rem;
+          margin-top: 15px;
         }
       }
     </style>
