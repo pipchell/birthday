@@ -2,31 +2,69 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
     <title>Happy Birthday!</title>
     <link rel="icon" href="logo.png" type="image/png" />
     <style>
+      /* Load custom font */
+      @font-face {
+        font-family: 'League Spartan Bold';
+        src: url('LeagueSpartan-Bold (1).woff2') format('woff2'),
+             url('LeagueSpartan-Bold (1).woff') format('woff');
+        font-weight: bold;
+        font-style: normal;
+      }
+      :root {
+        --main-green: #17d860;
+        --dark-green: #0f5a35;
+        --light-green: #a3f7b5;
+      }
       body {
-        background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+        background: var(--dark-green);
         display: flex;
         justify-content: center;
         align-items: center;
         height: 100vh;
         margin: 0;
-        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        color: #f0f0f5;
-        text-shadow: 0 0 8px #f72585, 0 0 20px #b5179e;
+        font-family: 'League Spartan Bold', sans-serif;
+        color: var(--light-green);
+        text-align: center;
+        padding: 20px;
+        flex-direction: column;
       }
       b {
-        font-size: 3rem;
-        padding: 20px 40px;
-        background: rgba(39, 39, 59, 0.8);
+        font-size: clamp(2rem, 6vw, 3.5rem);
+        padding: clamp(15px, 4vw, 30px) clamp(30px, 8vw, 60px);
+        background: rgba(23, 216, 96, 0.15);
         border-radius: 15px;
-        box-shadow: 0 0 15px #f72585;
+        box-shadow:
+          0 0 10px var(--main-green),
+          0 0 25px var(--light-green);
+        text-shadow:
+          0 0 6px var(--main-green),
+          0 0 15px var(--light-green);
+        margin-bottom: 20px;
+        font-weight: bold; /* ensure bold */
+      }
+      .nose-emoji {
+        font-size: clamp(4rem, 15vw, 7rem);
+        text-shadow:
+          0 0 8px var(--main-green),
+          0 0 20px var(--light-green);
+      }
+      @media (max-width: 400px) {
+        b {
+          padding: 12px 20px;
+          font-size: 2rem;
+        }
+        .nose-emoji {
+          font-size: 4rem;
+        }
       }
     </style>
   </head>
   <body>
     <b>Happy Birthday Grandad!</b>
+    <div class="nose-emoji" aria-label="Big nose emoji" role="img">👃</div>
   </body>
 </html>
